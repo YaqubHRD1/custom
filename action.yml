@@ -1,16 +1,9 @@
-name: Python Test Setup
-description: Install dependencies and run tests
+name: Custom Action
+description: My first custom action
 
 runs:
   using: composite
   steps:
-    - name: Install dependencies
+    - name: Say hello
+      run: echo "Hello from my custom action"
       shell: bash
-      run: |
-        python -m pip install --upgrade pip
-        if [ -f req.txt ]; then pip install -r req.txt; fi
-
-    - name: Run tests
-      shell: bash
-      run: |
-        python -m unittest discover
