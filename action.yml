@@ -4,6 +4,6 @@ description: My first custom action
 runs:
   using: composite
   steps:
-    - name: Say hello
+    - name: Say Hello
       run: echo "Hello from my custom action"
       shell: bash
