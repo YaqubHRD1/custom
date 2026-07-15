@@ -3,7 +3,16 @@ description: My first custom action
 
 runs:
   using: composite
+  
   steps:
-    - name: Say Hello
-      run: echo "Hello from my custom action"
+
+    - name: Install dependencies
       shell: bash
+      run: |
+        python -m pip install --upgrade pip
+
+    - name: Run tests
+      shell: bash
+      run: |
+        cd chapter2
+        python -m unittest discover
