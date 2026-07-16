@@ -1,6 +1,11 @@
 name: Custom Action
 description: My first custom action
 
+inputs:
+  name:
+    description: Name to greet
+    required: true
+
 runs:
   using: composite
   
