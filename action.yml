@@ -6,6 +6,9 @@ runs:
   
   steps:
 
+    - run: echo "Hello ${{ inputs.name }}"
+      shell: bash
+
     - name: Install dependencies
       shell: bash
       run: |
